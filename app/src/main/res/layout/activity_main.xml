@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.raflyalk.prdtodolist.MainActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_margin="16dp"
+        android:layout_gravity="top|left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        android:id="@+id/floatingActionButton"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        android:src="@drawable/ic_plus"
+        app:layout_anchor="@+id/listView"
+        app:layout_anchorGravity="bottom|right"
+        app:elevation="10dp"
+        android:onClick="sendMessage"
+        />
+
+
+</android.support.design.widget.CoordinatorLayout>
