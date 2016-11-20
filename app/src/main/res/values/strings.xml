@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PRD To Do List</string>
+    <string name="tambah_todo">Tambah To Do</string>
+    <string name="kirim">Kirim</string>
 </resources>

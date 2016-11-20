@@ -1,5 +1,6 @@
 package com.raflyalk.prdtodolist;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,15 +15,29 @@ public class TambahActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tambah);
+
+        Button tombol = (Button) findViewById(R.id.button);
+        tombol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goBack = new Intent();
+                EditText editText = (EditText) findViewById(R.id.tulisToDo);
+                String message = String.valueOf(editText.getText());
+                goBack.putExtra("tambah_konten", message);
+                setResult(RESULT_OK, goBack);
+                finish();
+            }
+        });
     }
 
-    public void kirimData(View v){
+    public void sendNewItem(View view){
+        EditText editText = (EditText) findViewById(R.id.tulisToDo);
+        String newText = String.valueOf(editText.getText());
 
-        Intent intentt = new Intent(this, MainActivity.class);
-        EditText editText = (EditText) findViewById(R.id.tombol);
-        String message = editText.getText().toString();
-        Toast.makeText(this,message,Toast.LENGTH_LONG).show();
-        intentt.putExtra("pesan", message);
-        startActivity(intentt);
+        Intent goBack = new Intent();
+        goBack.putExtra("New Item", newText);
+        setResult(RESULT_OK, goBack);
+
+        finish();
     }
 }
