@@ -21,6 +21,7 @@ public class editScreen extends AppCompatActivity {
 
     }
 
+
     public void sendNewItem(View view){
         EditText editText = (EditText) findViewById(R.id.tulisToDo);
         String newText = String.valueOf(editText.getText());

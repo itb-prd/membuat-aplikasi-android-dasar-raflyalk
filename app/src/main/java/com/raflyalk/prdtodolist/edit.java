@@ -48,8 +48,8 @@ public class edit extends DialogFragment{
                         Intent getNewNameIntent = new Intent(getActivity(), editScreen.class);
 
                         final int result = 1;
-                        getNewNameIntent.putExtra("Index of ToDoList", mNum);
-                        getNewNameIntent.putExtra("Name of ToDoList", zName);
+                        getNewNameIntent.putExtra("Index of To Do List", mNum);
+                        getNewNameIntent.putExtra("Name of To Do List", zName);
 
                         getActivity().startActivityForResult(getNewNameIntent, result);
 
@@ -61,7 +61,7 @@ public class edit extends DialogFragment{
 
                         Intent deleteIntent = new Intent(getActivity(), delete.class);
                         final int result = 3;
-                        deleteIntent.putExtra("Index of ToDoList", mNum);
+                        deleteIntent.putExtra("Index of To Do List", mNum);
 
                         getActivity().startActivityForResult(deleteIntent, result);
 
