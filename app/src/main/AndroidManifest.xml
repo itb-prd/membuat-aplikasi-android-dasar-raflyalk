@@ -15,8 +15,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TambahActivity"></activity>
-        <activity android:name=".editScreen"></activity>
+        <activity
+            android:name=".TambahActivity"
+            android:label="@string/tambah">
+        </activity>
+        <activity
+            android:name=".editScreen"
+            android:label="@string/edit">
+
+        </activity>
+        <activity android:name=".delete"></activity>
     </application>
 
 </manifest>

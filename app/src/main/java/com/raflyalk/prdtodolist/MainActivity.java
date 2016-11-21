@@ -76,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
             kontenToDo.add(data.getExtras().getString("New Item"));
         }
         if (requestCode == 3 && data!= null){
-            int index = data.getExtras().getInt("Index To Do");
-            kontenToDo.remove(index);
+            kontenToDo.remove(data.getExtras().getInt("Index To Do"));
         }
         displayDaftar();
     }

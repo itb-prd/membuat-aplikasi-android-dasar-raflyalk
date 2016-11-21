@@ -2,5 +2,7 @@
     <string name="app_name">PRD To Do List</string>
     <string name="tambah_todo">Tambah To Do</string>
     <string name="edit_todo">Edit To Do</string>
+    <string name="edit">Edit</string>
     <string name="kirim">Kirim</string>
+    <string name="tambah">Tambah</string>
 </resources>
